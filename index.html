@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS</title>
+</head>
+<body>
+    <div ng-app="MyApp" ng-controller="formCtrl">
+        <form novalidate>
+            codigo de empleado:<br>
+            <input type="text" ng-model="user.empleado"><br>
+            horas trabajadas:<br>
+            <input type="text" ng-model="user.horas"><br>
+            tarifa por hora:<br>
+            <input type="text" ng-model="user.tarifa"><br>
+            <br><br>
+            <button ng-click="calcular()">calcular</button>
+        </form>
+        <p>el empleado con codigo {{ user.empleado }}</p>
+        <p>trabaja {{ user.horas }} horas</p>
+        <p>cobrando ${{ user.tarifa }} por hora</p>
+        <br>
+        <p>el sueldo neto es {{ user.sueldoneto }} soles </p>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
